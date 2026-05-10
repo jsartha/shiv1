@@ -1,336 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
 
-    <title>College Dashboard</title>
+<head>
+
+    <title>Dashboard</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
     <style>
 
         body{
+            margin:0;
             display:flex;
-            min-height:100vh;
-            background:#f4f6f9;
+            font-family:Arial;
         }
 
         /* Sidebar */
+
         .sidebar{
-            width:250px;
-            background:#0d6efd;
+            width:200px;
+            height:100vh;
+            background:blue;
             color:white;
             padding:20px;
-        }
-
-        .sidebar h2{
-            text-align:center;
-            margin-bottom:30px;
         }
 
         .sidebar a{
             display:block;
             color:white;
             text-decoration:none;
-            padding:12px;
-            margin:10px 0;
-            border-radius:8px;
-            transition:0.3s;
-        }
-
-        .sidebar a:hover{
-            background:white;
-            color:#0d6efd;
+            margin:15px 0;
         }
 
         /* Main */
+
         .main{
             flex:1;
             padding:20px;
+            background:#f2f2f2;
         }
 
-        section{
-            padding-top:50px;
-        }
+        /* Cards */
 
         .card-box{
-            border:none;
-            border-radius:15px;
-            color:white;
-            padding:20px;
-        }
-
-        .bg1{
-            background:#0d6efd;
-        }
-
-        .bg2{
-            background:#198754;
-        }
-
-        .bg3{
-            background:#dc3545;
-        }
-
-        .bg4{
-            background:#ffc107;
-            color:black;
-        }
-
-        .table-box{
             background:white;
             padding:20px;
-            border-radius:15px;
-            margin-top:25px;
+            text-align:center;
+            border-radius:10px;
+            box-shadow:0 0 5px gray;
+        }
+
+        /* Statistics */
+
+        .stats{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 5px gray;
         }
 
     </style>
+
 </head>
 
 <body>
 
     <!-- Sidebar -->
+
     <div class="sidebar">
 
-        <h2>ABC College</h2>
+        <h2>Dashboard</h2>
 
-        <!-- href added -->
+        <a href="#">Home</a>
 
-        <a href="#dashboard">
-            <i class="bi bi-house-door-fill"></i>
-            Dashboard
-        </a>
+        <a href="#">Students</a>
 
-        <a href="#students">
-            <i class="bi bi-people-fill"></i>
-            Students
-        </a>
+        <a href="#">Courses</a>
 
-        <a href="#teachers">
-            <i class="bi bi-person-workspace"></i>
-            Teachers
-        </a>
-
-        <a href="#courses">
-            <i class="bi bi-book-fill"></i>
-            Courses
-        </a>
-
-        <a href="#statistics">
-            <i class="bi bi-bar-chart-fill"></i>
-            Statistics
-        </a>
-
-        <a href="#settings">
-            <i class="bi bi-gear-fill"></i>
-            Settings
-        </a>
+        <a href="#">Statistics</a>
 
     </div>
 
-    <!-- Main Content -->
+    <!-- Main -->
+
     <div class="main">
 
-        <!-- Dashboard -->
-        <section id="dashboard">
+        <h2>Admin Dashboard</h2>
 
-            <h2 class="mb-4">Dashboard</h2>
+        <!-- Cards -->
 
-            <div class="row g-4">
+        <div class="row">
 
-                <div class="col-md-3">
+            <div class="col-md-4">
 
-                    <div class="card-box bg1">
+                <div class="card-box">
 
-                        <h5>Total Students</h5>
-                        <h2>1200</h2>
+                    <h3>1200</h3>
 
-                    </div>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <div class="card-box bg2">
-
-                        <h5>Total Teachers</h5>
-                        <h2>85</h2>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <div class="card-box bg3">
-
-                        <h5>Total Courses</h5>
-                        <h2>25</h2>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <div class="card-box bg4">
-
-                        <h5>Total Events</h5>
-                        <h2>15</h2>
-
-                    </div>
+                    <p>Total Students</p>
 
                 </div>
 
             </div>
 
-        </section>
+            <div class="col-md-4">
 
-        <!-- Students -->
-        <section id="students">
+                <div class="card-box">
 
-            <div class="table-box">
+                    <h3>25</h3>
 
-                <h3>Students</h3>
-
-                <table class="table table-bordered">
-
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Course</th>
-                    </tr>
-
-                    <tr>
-                        <td>101</td>
-                        <td>Rahul</td>
-                        <td>BCA</td>
-                    </tr>
-
-                    <tr>
-                        <td>102</td>
-                        <td>Priya</td>
-                        <td>BBA</td>
-                    </tr>
-
-                </table>
-
-            </div>
-
-        </section>
-
-        <!-- Teachers -->
-        <section id="teachers">
-
-            <div class="table-box">
-
-                <h3>Teachers</h3>
-
-                <ul>
-                    <li>Mr. Sharma</li>
-                    <li>Mrs. Verma</li>
-                    <li>Dr. Patel</li>
-                </ul>
-
-            </div>
-
-        </section>
-
-        <!-- Courses -->
-        <section id="courses">
-
-            <div class="table-box">
-
-                <h3>Courses</h3>
-
-                <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="card p-3">
-                            <h5>BCA</h5>
-                            <p>Computer Application</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card p-3">
-                            <h5>BBA</h5>
-                            <p>Business Management</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card p-3">
-                            <h5>BSc IT</h5>
-                            <p>Information Technology</p>
-                        </div>
-                    </div>
+                    <p>Total Courses</p>
 
                 </div>
 
             </div>
 
-        </section>
+            <div class="col-md-4">
+
+                <div class="card-box">
+
+                    <h3>90%</h3>
+
+                    <p>Placement</p>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <!-- Statistics -->
-        <section id="statistics">
 
-            <div class="table-box">
+        <div class="stats">
 
-                <h3>Statistics</h3>
+            <h3>Statistics</h3>
 
-                <p>Total Placement : 90%</p>
+            <p>Attendance</p>
 
-                <div class="progress mb-3">
+            <div class="progress mb-3">
 
-                    <div class="progress-bar bg-success"
-                    style="width:90%">
-                        90%
-                    </div>
-
-                </div>
-
-                <p>Attendance : 80%</p>
-
-                <div class="progress">
-
-                    <div class="progress-bar bg-primary"
-                    style="width:80%">
-                        80%
-                    </div>
-
+                <div class="progress-bar bg-success"
+                style="width:80%">
+                    80%
                 </div>
 
             </div>
 
-        </section>
+            <p>Exam Result</p>
 
-        <!-- Settings -->
-        <section id="settings">
+            <div class="progress mb-3">
 
-            <div class="table-box">
-
-                <h3>Settings</h3>
-
-                <button class="btn btn-primary">
-                    Change Password
-                </button>
-
-                <button class="btn btn-danger">
-                    Logout
-                </button>
+                <div class="progress-bar bg-primary"
+                style="width:70%">
+                    70%
+                </div>
 
             </div>
 
-        </section>
+            <p>Assignments</p>
+
+            <div class="progress">
+
+                <div class="progress-bar bg-danger"
+                style="width:60%">
+                    60%
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 </body>
+
 </html>
